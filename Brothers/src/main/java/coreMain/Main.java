@@ -14,7 +14,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Matrice matrice = new Matrice();
 		JFrame frame = new MyFrame();
-		frame.setVisible(true);
+		//frame.setVisible(true);
 		Mondo mondo = new Mondo(matrice);
 	}
 
