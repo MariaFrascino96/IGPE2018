@@ -5,12 +5,11 @@ import java.awt.Toolkit;
 
 public interface StaticVariables {
 	
-	final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	final int screen_width = (int) screenSize.getWidth();
-	final int screen_height = (int) screenSize.getHeight();
-	int finestra_width = screen_width/2;
-	int finestra_height = screen_height/2;
-	final int dimMatrice = 20; 
+	final static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	final static int screen_width = (int) screenSize.getWidth();
+	final static int screen_height = (int) screenSize.getHeight();
+	final static int finestra_width = screen_width/2;
+	final static int finestra_height = screen_height/2;
+	final static int dimMatrice = 20; 
 	
-
 }

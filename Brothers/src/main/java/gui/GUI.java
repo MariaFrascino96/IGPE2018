@@ -1,5 +1,6 @@
-package core;
+package gui;
 
+import core.Mondo;
 import gui.Menu;
 import gui.MyFrame;
 import gui.MyPanel;

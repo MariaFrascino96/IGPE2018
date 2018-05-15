@@ -1,5 +1,7 @@
 package core;
 
+import gui.GUI;
+
 public class Mondo {
 	
 	//private Listener listenerClass;
@@ -8,7 +10,7 @@ public class Mondo {
 	//private RidimensionaFinestre ridimensiona;
 	private Matrice matrice;
 	private GUI gui;
-	private Timer timer;
+	//private Timer timer;
 	private Game game;
 	
 	public Mondo(Matrice m)
@@ -17,8 +19,9 @@ public class Mondo {
 		int id_shape = 1, id_immagine = 1;
 		mago = new Mago(id_shape,id_immagine,matrice);
 		gui = new GUI(this);
-		timer = new Timer(this,gui.getMyframe().getMypanel());
-		timer.start();
+		mago.start();
+		//timer = new Timer(this,gui.getMyframe().getMypanel());
+		//timer.start();
 		game = new Game(this);
 		
 	}
@@ -39,15 +42,6 @@ public class Mondo {
 	public void setGui(GUI gui) {
 		this.gui = gui;
 	}
-
-	public Timer getTimer() {
-		return timer;
-	}
-
-	public void setTimer(Timer timer) {
-		this.timer = timer;
-	}
-	
 	
 	
 	

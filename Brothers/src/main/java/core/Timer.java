@@ -2,18 +2,12 @@ package core;
 
 import javax.swing.JPanel;
 
-public class Timer extends Thread{
+public abstract class Timer extends Thread{
 	
-	private Mondo mondo;
-	private JPanel jpanel;
 	
-	public Timer(Mondo m, JPanel p)
-	{
-		this.mondo = m;
-		this.jpanel = p;
-	}
+	public Timer() {}
 	
-	public void run()
+	/*public void run()
 	{
 		while(!mondo.getMago().deadShape)
 		{
@@ -22,7 +16,7 @@ public class Timer extends Thread{
 			if(!mondo.getMago().automatedMove())
 				System.out.println("coord fuori norma");
 		}
-	}
+	}*/
 	
 
 }

@@ -5,17 +5,33 @@ import java.util.Random;
 import gui.Images;
 
 public class Mago extends Shape implements PlayerAction  {
+	
+	private Matrice matrice;
 
 	public Mago(int i, int immagine, Matrice m) {
 		
 		super();
 		this.matrice = m;
 		this.id_shape = i;
-		matrice = new Matrice();
 		random = new Random();
 		this.inserisciOggetto(id_shape);
+		//this.timer.start();
 
 	}
+	
+	public void run()
+	{
+		System.out.println("eccomi");
+		while(!this.deadShape)
+		{
+			this.automatedMove();
+			
+			if(!this.automatedMove())
+				System.out.println("coord fuori norma");
+		}
+	}
+	
+
 	
 
 	/*public void updateCoord(int key, Images shapes) {
