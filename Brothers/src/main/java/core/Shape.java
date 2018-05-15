@@ -2,7 +2,7 @@ package core;
 
 import java.util.Random;
 
-public abstract class Shape implements PlayerAction{
+public abstract class Shape extends Thread implements PlayerAction{
 	
 	protected int id_shape; // il valore della shape(Es moto 1, moto 2[multiplaying])
 	protected Random random;
@@ -11,8 +11,9 @@ public abstract class Shape implements PlayerAction{
 							// Quest'intero servirà alla classe adibita a caricare tutte le immagini del
 							// gioco.
 	boolean deadShape;
-	protected Matrice matrice;
-	
+	//protected Matrice matrice;
+	//protected Timer timer;
+
 	public Shape()
 	{
 		this.i_iniziale = 0;
@@ -20,10 +21,10 @@ public abstract class Shape implements PlayerAction{
 		this.id_shape = 0;
 		this.immagine = 0;
 		this.deadShape = false;
+		//this.timer = new Timer();
 	}
 	
 	
-
 	public boolean isDeadShape() {
 		return deadShape;
 	}
