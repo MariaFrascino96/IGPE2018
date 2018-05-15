@@ -12,7 +12,7 @@ public class Game {
 	
 	public void play()
 	{
-		
+		mondo.getMago().start();
 	}
 
 }

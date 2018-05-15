@@ -19,7 +19,7 @@ public class Mondo {
 		int id_shape = 1, id_immagine = 1;
 		mago = new Mago(id_shape,id_immagine,matrice);
 		gui = new GUI(this);
-		mago.start();
+		//mago.start();
 		//timer = new Timer(this,gui.getMyframe().getMypanel());
 		//timer.start();
 		game = new Game(this);
