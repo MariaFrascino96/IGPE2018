@@ -1,10 +1,12 @@
 package core;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-public class Listener implements MouseListener, MouseMotionListener{
+public class Listener implements KeyListener , MouseListener, MouseMotionListener{
 	
 	private int tasto;
 	
@@ -15,7 +17,7 @@ public class Listener implements MouseListener, MouseMotionListener{
 	
 	
 	
-	/*public int getTasti()
+ /*	public int getTasti()
 	{
 		if(Gdx.input.isKeyPressed(Keys.UP))
 		{
@@ -51,9 +53,9 @@ public class Listener implements MouseListener, MouseMotionListener{
 		
 		return tasto;
 		
-	}
+	}*/
 	
-	*/
+	
 
 	public int getTasto() {
 		return tasto;
@@ -115,6 +117,53 @@ public class Listener implements MouseListener, MouseMotionListener{
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode()== e.VK_UP){
+			System.out.println("Ho premuto il tasto UP");
+			tasto = 1;
+			
+		}
+		
+		else if(e.getKeyCode()== e.VK_DOWN){
+			System.out.println("Ho premuto il tasto DOWN");
+			tasto = 2;
+		}
+		
+		else if(e.getKeyCode()== e.VK_RIGHT){
+			System.out.println("Ho premuto il tasto RIGHT");
+			tasto = 3;
+		}	
+		else if(e.getKeyCode()== e.VK_LEFT)
+		{
+			System.out.println("Ho premuto il tasto LEFT");
+			tasto = 4;
+			
+		}
+		else 
+		{
+			tasto = 0;
+		}
+	}
+
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -13,6 +13,7 @@ public class MyPanel extends JPanel implements MouseListener, MouseMotionListene
 	
 	private Label label1;
 	
+	
 	public MyPanel()
 	{
 		this.setBackground(Color.WHITE);

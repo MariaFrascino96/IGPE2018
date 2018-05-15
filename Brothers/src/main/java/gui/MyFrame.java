@@ -5,11 +5,13 @@ import java.awt.Label;
 
 import javax.swing.JFrame;
 
+import core.Mondo;
 import core.StaticVariables;
 
 public class MyFrame extends JFrame{
 	
 	private MyPanel mypanel;
+	
 	//private Label label1;
 	
 	public MyFrame()
